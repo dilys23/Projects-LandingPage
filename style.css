@@ -11,9 +11,9 @@ body {
   font-weight: 300;
   overflow-y: scroll;
   overflow-x: hidden;
-  
 }
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -541,7 +541,7 @@ nav .desktop-nav li a:hover {
     overflow: hidden;
   }
 
-  .mobile-search-container .search-bar.active+.cancel-btn {
+  .mobile-search-container .search-bar.active + .cancel-btn {
     padding: 0 16px;
     width: 74px;
   }
@@ -562,7 +562,7 @@ nav .desktop-nav li a:hover {
   }
 
   /* Quick Links */
-  .mobile-search-container .search-bar.active~.quick-links {
+  .mobile-search-container .search-bar.active ~ .quick-links {
     top: 80px;
     opacity: 1;
     pointer-events: auto;
@@ -686,7 +686,6 @@ a {
 /*  */
 
 @media only screen and (min-width: 735px) {
-
   /* video slider */
   .section-slider {
     position: relative;
@@ -776,36 +775,33 @@ a {
     transition: 2s ease;
     transition-property: clip-path;
   }
-  @media only screen and (max-width: 734px) {
+  @media screen and (max-width: 734px) {
     /* video slider */
     .section-slider {
-      overflow: hidden;
+      /* overflow: hidden; */
       /* position: relative; */
-      margin-top: -150px;
-      width: 100px;
-
-
-    }
   
+    }
+
     .slider-container {
-      position: relative;
+      /* position: relative; */
       /* height: auto; */
     }
-    .content-slide{
+    .content-slide {
       width: 100px;
     }
-  
-    .slider-container .content-slide {
+
+    .section-slider .slider-container .content-slide {
       /* position: absolute; */
-      width: -webkit-fill-available; /* Chiều rộng video là 100% của phần tử cha */
+      width: 100px; /* Chiều rộng video là 100% của phần tử cha */
       height: 70%;
-      height: auto; /* Chiều cao tự động */
+
       border-radius: 0;
       clip-path: circle(0% at 50% 50%);
       transition: 2s ease;
       transition-property: clip-path;
     }
-  
+
     .slider-container .content-slide.active {
       clip-path: circle(150% at 50% 50%);
     }
@@ -818,16 +814,16 @@ a {
       text-align: center;
       display: none;
     }
-  
+
     .slider-container .content.active {
       display: block;
     }
-  
+
     .slider-container .content h1 {
       font-size: 1.5em;
       color: white;
     }
-  
+
     .slider-navigation {
       position: absolute;
       display: flex;
@@ -835,7 +831,7 @@ a {
       align-items: center;
       margin-bottom: 12px;
     }
-  
+
     .slider-navigation .nav-btn {
       width: 12px;
       height: 12px;
@@ -846,20 +842,19 @@ a {
       box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
       transition: 0.3s ease;
     }
-  
+
     .slider-navigation .nav-btn:not(:last-child) {
       margin-right: 20px;
     }
-  
+
     .slider-navigation .nav-btn:hover {
       transform: scale(1.2);
     }
-  
+
     .slider-navigation .nav-btn.active {
       background: #2696e9;
     }
   }
-  
 
   /* Section closer look  */
 
@@ -1002,21 +997,19 @@ a {
   list-style: none;
   margin-bottom: 50px;
   font-size: 28px;
-  line-height: 1.1428571429; 
+  line-height: 1.1428571429;
   font-weight: 600;
-  letter-spacing: .007em;
-  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  letter-spacing: 0.007em;
+  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
 }
-.section-explore-story .content-column .title.color1 li{
-  
+.section-explore-story .content-column .title.color1 li {
   color: #13ab8d;
 }
-.section-explore-story .content-column .title.color2 li{
-  
+.section-explore-story .content-column .title.color2 li {
   color: #352eb8;
 }
-.section-explore-story .content-column .title.color3 li{
-  
+.section-explore-story .content-column .title.color3 li {
   color: #742ea6;
 }
 
@@ -1217,42 +1210,42 @@ a {
   }
 }
 
-/* @media only screen and (max-width: 768px) { */
-  .section-gamechanging {
-    background-color: #000000;
-    flex-direction: column;
-    align-items: center;
-  }
+ @media only screen and (max-width: 768px) {
+.section-gamechanging {
+  background-color: #000000;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .section-gamechanging .section-content {
-    margin-top: 0;
-    margin-left: 0;
-    text-align: center;
-  }
+.section-gamechanging .section-content {
+  margin-top: 0;
+  margin-left: 0;
+  text-align: center;
+}
 
-  .section-gamechanging .section-picture {
-    margin-top: 50px;
-  }
+.section-gamechanging .section-picture {
+  margin-top: 50px;
+}
 
-  /* Adjust the position and size of the images for mobile screens */
-  .img1,
-  .img2,
-  .img3,
-  .img4,
-  .img5,
-  .img6,
-  .img7,
-  .img8 {
-    position: static;
-    width: 100%;
-    max-width: 300px;
-    transform: none;
-    margin-bottom: 20px;
-  }
-/* } */
+/* Adjust the position and size of the images for mobile screens */
+.img1,
+.img2,
+.img3,
+.img4,
+.img5,
+.img6,
+.img7,
+.img8 {
+  position: static;
+  width: 100%;
+  max-width: 300px;
+  transform: none;
+  margin-bottom: 20px;
+}
+}
 
 .content-gpu {
-  padding-top: 16rem;
+  padding-top: 58rem;
 }
 
 .content-row1 {
@@ -1642,8 +1635,7 @@ p {
 }
 
 /* section connection  */
-.section-connections
-{
+.section-connections {
   transform: translateY(-85rem);
 }
 .section-content {
@@ -1897,7 +1889,7 @@ p {
   margin-bottom: 40px;
 }
 
-.row1 .column>* {
+.row1 .column > * {
   margin-bottom: 20px;
   /* Đặt khoảng cách dưới cho mỗi phần tử con trong cột */
 }
@@ -1965,7 +1957,7 @@ p {
   margin-top: 20px;
 }
 
-.row2 .column>* {
+.row2 .column > * {
   margin-bottom: 20px;
   /* Đặt khoảng cách dưới cho mỗi phần tử con trong cột */
 }
@@ -2010,7 +2002,6 @@ p {
   transform: translateY(-85rem);
 }
 
-
 .section-Explore .header {
   transform: translate(100px, 50px);
   width: 60%;
@@ -2034,7 +2025,6 @@ p {
   justify-content: start;
   gap: 100px;
   margin-bottom: 400px;
-
 }
 
 .section-Explore .container-column .title h3 {
@@ -2042,7 +2032,8 @@ p {
   line-height: 1.3333733333;
   font-weight: 400;
   letter-spacing: -0.01em;
-  font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
   color: #6e6e73;
   margin-bottom: 15px;
 }
@@ -2057,8 +2048,9 @@ p {
   font-size: 28px;
   line-height: 1.1428571429;
   font-weight: 600;
-  letter-spacing: .007em;
-  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  letter-spacing: 0.007em;
+  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
 }
 
 .container-column #column2 ul li,
@@ -2068,7 +2060,8 @@ p {
   line-height: 1.4285914286;
   font-weight: 400;
   letter-spacing: -0.016em;
-  font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
   font-weight: 600;
 }
 
@@ -2079,8 +2072,8 @@ p {
   top: 180vh;
   margin-top: 100px;
   padding: 0px;
-  margin-bottom: 10px;  
-    transform: translateY(-90rem);
+  margin-bottom: 10px;
+  transform: translateY(-90rem);
   background-color: #efefef;
   border-bottom: #6e6e73 1px solid;
 }
@@ -2097,16 +2090,12 @@ p {
   font-size: 12px;
   line-height: 1.3333733333;
   font-weight: 400;
-  
-  
 }
-
 
 .section-Final {
   position: relative;
   top: 189vh;
   transform: translateY(-95rem);
-
 }
 
 .section-Final ul,
@@ -2116,13 +2105,11 @@ p {
 }
 
 .section-Final .content {
-
   padding: 15px 270px;
   justify-content: flex-start;
 }
 
 .section-Final #content1 {
-  
 }
 
 .section-Final ul {
@@ -2135,7 +2122,8 @@ p {
   line-height: 1.3333733333;
   font-weight: 400;
   letter-spacing: -0.01em;
-  font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
   color: #6e6e73;
   margin-bottom: 15px;
 }
@@ -2162,7 +2150,6 @@ p {
   padding-right: 20px;
 }
 
-
 .ac-gf-directory-column h3 {
   font-size: 12px;
 }
@@ -2172,6 +2159,6 @@ p {
 }
 
 .content1 a {
-  color: #0066CC;
+  color: #0066cc;
   text-decoration: underline;
 }

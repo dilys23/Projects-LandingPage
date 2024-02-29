@@ -122,3 +122,28 @@ btns.forEach((btn, i) => {
     sliderNav(i);
   });
 });
+
+const config = {
+  distance: '20px',
+  duration: 1000,
+  delay: 50,
+  rotate: { x: 0, y: 0, z: 0 },
+  opacity: 0,
+  scale: 1,
+  easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
+  mobile: true,
+  container: document.querySelector('body'),
+  origin: 'bottom'
+}
+ScrollReveal().reveal('.reveal', {
+  duration: 1000,
+  origin: 'bottom',
+  distance: '50px',
+  viewFactor: 0.5
+});
+ScrollReveal().init(config)
+
+const revealElements = document.querySelectorAll('.reveal')
+revealElements.forEach((revealElement) => {
+  ScrollReveal().reveal(revealElement)
+})
